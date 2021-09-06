@@ -124,26 +124,26 @@ void loop(){
              else if (header.indexOf("GET /switch3/turn_on") >= 0)
             {
               Serial.println("Switch 3 (GPIO 14) ON");
-              output14State = "on";
+              switch3_state = "on";
               digitalWrite(switch3, LOW);
             } 
             else if (header.indexOf("GET /switch3/turn_off") >= 0)
             {
               Serial.println("Switch 3 (GPIO 14) OFF");
-              output14State = "off";
+              switch3_state = "off";
               digitalWrite(switch3, HIGH);
             }
             // GPIO27
             else if (header.indexOf("GET /switch4/turn_on") >= 0)
             {
               Serial.println("Switch 4 (GPIO 27) ON");
-              output27State = "on";
+              switch4_state = "on";
               digitalWrite(switch4, LOW);
             } 
             else if (header.indexOf("GET /switch4/turn_off") >= 0)
             {
               Serial.println("Switch 4 (GPIO 27) OFF");
-              output27State = "off";
+              switch4_state = "off";
               digitalWrite(switch4, HIGH);
             }
           
